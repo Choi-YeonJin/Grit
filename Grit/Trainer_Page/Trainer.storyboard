@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Sx-dF-dle">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trainer-->
+        <scene sceneID="GSG-CI-eY3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Sx-dF-dle" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trainer" image="Trainer" selectedImage="SelectTrainer" id="983-7s-fMg">
+                        <color key="badgeColor" red="0.6588235294" green="0.054901960780000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyl-R1-h5Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X0M-ox-dkb" kind="relationship" relationship="rootViewController" id="T2c-2A-7i0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnJ-R8-yga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="169"/>
+        </scene>
+        <!--TRAINER-->
+        <scene sceneID="vCg-j0-N4I">
+            <objects>
+                <viewController id="X0M-ox-dkb" customClass="Trainer_Main" customModule="Grit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYh-Rl-gv7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-Iq-Ney">
+                                <rect key="frame" x="119" y="142" width="178" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                                <state key="normal" title="MY TRAINERS 보기" backgroundImage="2">
+                                    <color key="titleColor" red="0.99992352724075317" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cis-j5-gbI" kind="show" id="2Rl-DJ-wqG"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vs6-ql-hqs">
+                                <rect key="frame" x="0.0" y="327" width="414" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gt9-8Y-zIr">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="estimatedItemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="" id="D5M-9D-2Oo" customClass="TrainerViewCell" customModule="Grit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L4c-hg-4jL">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="128"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hqL-Ve-Ph9">
+                                <rect key="frame" x="20" y="215" width="374" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">뉴요커님 에게
+맞는 GRIT 트레이너 찾기</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IHB-Vh-871">
+                                <rect key="frame" x="44" y="542" width="325" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <string key="text">
+Trainer Jenny
+
+청담동 피트니스 근무 경력 10년 
+연예인 김XX, 오XX 퍼스널 트레이너 
+자신감은 떨어지지만 희망을 잃지 않는 사람들에게 
+뜨거운 호응을 얻고 있는 스타 트레이너
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-4B-BQY">
+                                <rect key="frame" x="119" y="691" width="143" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="5"/>
+                                <state key="normal" title="더보기" backgroundImage="307"/>
+                                <connections>
+                                    <segue destination="EEX-J9-jIT" kind="show" id="Ost-6a-4f3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="clf-q1-SbJ">
+                                <rect key="frame" x="213" y="708" width="14" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4L9-6P-OmM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TRAINER" id="ofY-S1-CQM"/>
+                    <connections>
+                        <outlet property="banner" destination="hqL-Ve-Ph9" id="itm-PK-zJg"/>
+                        <outlet property="btn_Detail" destination="J6l-4B-BQY" id="XjU-HA-Z4b"/>
+                        <outlet property="btn_MyT" destination="dlv-Iq-Ney" id="fMF-vc-dbH"/>
+                        <outlet property="collectionView" destination="vs6-ql-hqs" id="581-Hq-lNk"/>
+                        <outlet property="tr_info" destination="IHB-Vh-871" id="E6q-Pj-9dJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLM-W5-Mgs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="169"/>
+        </scene>
+        <!--TRAINER DETAIL-->
+        <scene sceneID="0hm-eI-Aib">
+            <objects>
+                <viewController id="EEX-J9-jIT" customClass="Trainer_Details" customModule="Grit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PkQ-ax-3Yg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trainerDetail" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-C7-7tz">
+                                <rect key="frame" x="20" y="120" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="2fl-BQ-niP"/>
+                                    <constraint firstAttribute="width" constant="200" id="Wyc-VU-7E2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-sQ-dZX">
+                                <rect key="frame" x="228" y="142" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Trainer Jenny
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YK-2h-VtO">
+                                <rect key="frame" x="228" y="177" width="145" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">2010.04 자격증 취득 
+2020.04 Gim 요가강사 
+2020.10 Grit 요가강사</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Pe-vPx">
+                                <rect key="frame" x="228" y="259" width="23" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebook"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPQ-db-9NZ">
+                                <rect key="frame" x="289" y="259" width="23" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="172"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@jenny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKz-6T-hQE">
+                                <rect key="frame" x="252" y="265" width="29" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@jenny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-oq-goU">
+                                <rect key="frame" x="316" y="265" width="29" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="55" translatesAutoresizingMaskIntoConstraints="NO" id="vz6-zW-uWC">
+                                <rect key="frame" x="228" y="295" width="23" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-jE-eHh">
+                                <rect key="frame" x="228" y="301" width="166" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">청담동 피트니스 근무 경력 10년
+연예인 김XX, 오XX 퍼스널 트레이너
+자신감은 떨이지지만 희망을 잃지 
+않는 사람들에게 뜨거운 
+호응을 얻고 있는 스타 트레이너</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-KR-EJu">
+                                <rect key="frame" x="38" y="432" width="335" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="수강 후기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxf-ay-05h">
+                                <rect key="frame" x="38" y="458" width="56" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-EK-n15">
+                                <rect key="frame" x="38" y="484" width="335" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="105" id="Sac-qX-1q1" customClass="ReviewCell" customModule="Grit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sac-qX-1q1" id="SqL-Be-geH" customClass="ReviewCell" customModule="Grit" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="너무나도 좋았습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-8L-T5l">
+                                                    <rect key="frame" x="20" y="11" width="101" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMA-YH-01U">
+                                                    <rect key="frame" x="20" y="28" width="295" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">청담동 피트니스 근무 경력 10년 연예인 김XX, 오XX 퍼스널 트레이너
+자신감은 떨이지지만 희망을 잃지 않는 사람들에게 뜨거운 
+호응을 얻고 있는 스타 트레이너</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20.12.10 수강생 김00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc6-Re-qmT">
+                                                    <rect key="frame" x="222" y="82" width="93" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="review_content" destination="UMA-YH-01U" id="fWJ-eM-jXX"/>
+                                            <outlet property="review_name" destination="H1X-8L-T5l" id="fnt-2J-zro"/>
+                                            <outlet property="reviewer" destination="vc6-Re-qmT" id="O5F-ES-XkA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fTY-O1-V0g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tkT-C7-7tz" firstAttribute="leading" secondItem="fTY-O1-V0g" secondAttribute="leading" constant="20" id="Is3-Sl-9jI"/>
+                            <constraint firstItem="tkT-C7-7tz" firstAttribute="top" secondItem="fTY-O1-V0g" secondAttribute="top" constant="32" id="V8n-D6-xk9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TRAINER DETAIL" id="UzM-iR-0ED"/>
+                    <connections>
+                        <outlet property="Review_table" destination="BuI-EK-n15" id="Mmm-1f-M1J"/>
+                        <outlet property="TitleLabel" destination="uAw-sQ-dZX" id="N2Z-KC-xm1"/>
+                        <outlet property="TrainerAward" destination="5YK-2h-VtO" id="twn-be-3wr"/>
+                        <outlet property="TrainerPF" destination="tkT-C7-7tz" id="fIY-7F-hL8"/>
+                        <outlet property="Trainer_detail" destination="cMK-jE-eHh" id="6pe-RL-NFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21w-uk-aXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="872"/>
+        </scene>
+        <!--MY TRAINERS-->
+        <scene sceneID="nt8-79-Zdh">
+            <objects>
+                <viewController storyboardIdentifier="next" id="cis-j5-gbI" customClass="Trainer_MyTrainer" customModule="Grit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SlH-co-puS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yl2-L4-3CN">
+                                <rect key="frame" x="0.0" y="176" width="414" height="168"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="DSO-fN-pri"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vig-Ux-9Q6">
+                                    <size key="itemSize" width="250" height="149"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrainerListCell" id="EEj-Gd-fcz" customClass="TrainerListCell" customModule="Grit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9.5" width="250" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c2O-ua-sYR">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-zX-ayP">
+                                                    <rect key="frame" x="0.0" y="-1" width="250" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Hd-zX-ayP" firstAttribute="leading" secondItem="c2O-ua-sYR" secondAttribute="leading" id="3uo-rQ-Clm"/>
+                                                <constraint firstAttribute="bottom" secondItem="5Hd-zX-ayP" secondAttribute="bottom" id="Z04-Ny-fEG"/>
+                                                <constraint firstAttribute="trailing" secondItem="5Hd-zX-ayP" secondAttribute="trailing" id="dHz-Pr-FYZ"/>
+                                                <constraint firstItem="5Hd-zX-ayP" firstAttribute="top" secondItem="c2O-ua-sYR" secondAttribute="top" constant="-1" id="f1i-Cm-bys"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="250" height="149"/>
+                                        <connections>
+                                            <outlet property="imgimage" destination="5Hd-zX-ayP" id="8a0-Cv-88n"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cis-j5-gbI" id="hf0-0q-phy"/>
+                                    <outlet property="delegate" destination="cis-j5-gbI" id="Du7-AM-xEI"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-Kt-NVq">
+                                <rect key="frame" x="0.0" y="404" width="414" height="168"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="LZu-MW-iM6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TdE-7F-j5x">
+                                    <size key="itemSize" width="250" height="149"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrainerListCell" id="0cl-Yi-hhm" customClass="TrainerListCell" customModule="Grit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9.5" width="250" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ba3-4x-1jR">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-pb-01n">
+                                                    <rect key="frame" x="0.0" y="-1" width="250" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cd2-pb-01n" firstAttribute="leading" secondItem="ba3-4x-1jR" secondAttribute="leading" id="Izl-dJ-fjB"/>
+                                                <constraint firstAttribute="bottom" secondItem="cd2-pb-01n" secondAttribute="bottom" id="eES-cX-hFq"/>
+                                                <constraint firstAttribute="trailing" secondItem="cd2-pb-01n" secondAttribute="trailing" id="r8Q-VC-mGx"/>
+                                                <constraint firstItem="cd2-pb-01n" firstAttribute="top" secondItem="ba3-4x-1jR" secondAttribute="top" constant="-1" id="uCK-Qf-MLX"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="250" height="149"/>
+                                        <connections>
+                                            <outlet property="imgimage" destination="cd2-pb-01n" id="kQX-SR-68w"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cis-j5-gbI" id="K0Z-KL-d7g"/>
+                                    <outlet property="delegate" destination="cis-j5-gbI" id="Irf-Z3-1Hp"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sLN-FA-fgg">
+                                <rect key="frame" x="0.0" y="606" width="414" height="168"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="vR7-Mb-TMl"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2u5-ek-Zl3">
+                                    <size key="itemSize" width="250" height="149"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrainerListCell" id="ifn-wc-919" customClass="TrainerListCell" customModule="Grit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9.5" width="250" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lZi-Dt-1J2">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="stU-0v-1PS">
+                                                    <rect key="frame" x="0.0" y="-1" width="250" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="stU-0v-1PS" firstAttribute="leading" secondItem="lZi-Dt-1J2" secondAttribute="leading" id="Dmm-iz-dEs"/>
+                                                <constraint firstAttribute="trailing" secondItem="stU-0v-1PS" secondAttribute="trailing" id="Pz6-aS-GmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="stU-0v-1PS" secondAttribute="bottom" id="UOT-01-BA6"/>
+                                                <constraint firstItem="stU-0v-1PS" firstAttribute="top" secondItem="lZi-Dt-1J2" secondAttribute="top" constant="-1" id="npq-ty-ajz"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="250" height="149"/>
+                                        <connections>
+                                            <outlet property="imgimage" destination="stU-0v-1PS" id="nf2-7i-lPR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cis-j5-gbI" id="QFQ-8B-9lT"/>
+                                    <outlet property="delegate" destination="cis-j5-gbI" id="rIV-Ev-Sjj"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Topic Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-H0-3XP">
+                                <rect key="frame" x="7" y="591" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Topic Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-gS-j3q">
+                                <rect key="frame" x="7" y="387" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Topic Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzw-sx-CVF">
+                                <rect key="frame" x="7" y="150" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v6b-YY-xDD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sLN-FA-fgg" firstAttribute="trailing" secondItem="v6b-YY-xDD" secondAttribute="trailing" id="3YO-cj-bfL"/>
+                            <constraint firstItem="yl2-L4-3CN" firstAttribute="trailing" secondItem="v6b-YY-xDD" secondAttribute="trailing" id="9oV-zm-gqm"/>
+                            <constraint firstItem="sLN-FA-fgg" firstAttribute="leading" secondItem="v6b-YY-xDD" secondAttribute="leading" id="KGY-8g-cr9"/>
+                            <constraint firstItem="yl2-L4-3CN" firstAttribute="leading" secondItem="v6b-YY-xDD" secondAttribute="leading" id="SWC-jV-Cwh"/>
+                            <constraint firstItem="sLN-FA-fgg" firstAttribute="top" secondItem="4dL-Kt-NVq" secondAttribute="bottom" constant="34" id="YSB-9h-zZB"/>
+                            <constraint firstItem="4dL-Kt-NVq" firstAttribute="leading" secondItem="v6b-YY-xDD" secondAttribute="leading" id="c36-r8-9iD"/>
+                            <constraint firstItem="yl2-L4-3CN" firstAttribute="top" secondItem="v6b-YY-xDD" secondAttribute="top" constant="88" id="f1C-w5-uLS"/>
+                            <constraint firstItem="4dL-Kt-NVq" firstAttribute="top" secondItem="yl2-L4-3CN" secondAttribute="bottom" constant="60" id="iLv-M9-Fck"/>
+                            <constraint firstItem="4dL-Kt-NVq" firstAttribute="trailing" secondItem="v6b-YY-xDD" secondAttribute="trailing" id="o9B-si-pHz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MY TRAINERS" id="Tef-xl-VFc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3HN-QT-zLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.53623188405798" y="871.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="172" width="25" height="25"/>
+        <image name="2" width="178" height="51"/>
+        <image name="307" width="129" height="48"/>
+        <image name="55" width="18" height="3"/>
+        <image name="SelectTrainer" width="31" height="19"/>
+        <image name="Trainer" width="31" height="19"/>
+        <image name="facebook" width="25" height="25"/>
+        <image name="rightArrow" width="15" height="11"/>
+        <image name="trainerDetail" width="177" height="268"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
