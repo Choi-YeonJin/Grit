@@ -9,21 +9,73 @@ import UIKit
 
 class Trainer_Details: UIViewController {
     
-    @IBOutlet weak var TrainerPF: UIImageView!
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var TrainerAward: UILabel!
     @IBOutlet weak var Trainer_detail: UILabel!
     @IBOutlet weak var Review_table: UITableView!
     
+    let scrollView = UIScrollView()
+    let contentView = UIView()
+    
+    let trainerDetailView = UIView()
+    let trainerImageView = UIView()
+    let trainerInfoView = UIView()
+    
+    let trainerPF : UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "trainerDetail")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(trainerDetailView)
         
-        print("TrainerTab")
+        [trainerImageView, trainerInfoView].enumerated().forEach {
+            trainerDetailView.addSubview($1)
+        }
+        trainerImageView.addSubview(trainerPF)
+        
+        scrollView.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.height.equalTo(view.snp.height).dividedBy(2)
+        }
+        contentView.snp.makeConstraints {
+            $0.edges.equalTo(scrollView)
+        }
+        
+        trainerDetailView.snp.makeConstraints {
+            make in
+            make.top.leading.equalTo(view.safeAreaLayoutGuide)
+            make.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+        trainerImageView.snp.makeConstraints {
+            make in
+            make.top.leading.equalTo(trainerDetailView)
+            make.width.equalTo(trainerDetailView.snp.width).dividedBy(2)
+        }
+        
+        trainerInfoView.snp.makeConstraints {
+            make in
+            make.top.trailing.equalTo(trainerDetailView)
+            make.width.equalTo(trainerDetailView.snp.width).dividedBy(2)
+        }
+        
+        trainerPF.snp.makeConstraints{
+            make in
+            make.top.equalTo(trainerImageView).offset(20)
+            make.leading.equalTo(trainerImageView).offset(10)
+            make.trailing.equalTo(trainerImageView).inset(10)
+            make.bottom.equalTo(trainerImageView).inset(20)
+
+        }
         
         view.backgroundColor = .white
         Review_table.dataSource = self
         Review_table.delegate = self
-        
         
         let buttonIcon = UIImage(named: "bell")
         //let logo = UIImage(named: "logo")
@@ -33,8 +85,6 @@ class Trainer_Details: UIViewController {
         rightBarButton.image = buttonIcon
         navigationController?.navigationBar.tintColor = .black
         self.navigationItem.rightBarButtonItem = rightBarButton
-        
-        
         
         setupview()
         
@@ -79,7 +129,7 @@ class Trainer_Details: UIViewController {
 extension Trainer_Details: UITableViewDataSource,UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

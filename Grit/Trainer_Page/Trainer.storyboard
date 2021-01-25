@@ -103,22 +103,25 @@ Trainer Jenny
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-4B-BQY">
-                                <rect key="frame" x="119" y="691" width="143" height="48"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="clf-q1-SbJ">
+                                <rect key="frame" x="213" y="708" width="14" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-4B-BQY">
+                                <rect key="frame" x="0.0" y="88" width="129" height="48"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="5"/>
                                 <state key="normal" title="더보기" backgroundImage="307"/>
                                 <connections>
                                     <segue destination="EEX-J9-jIT" kind="show" id="Ost-6a-4f3"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="clf-q1-SbJ">
-                                <rect key="frame" x="213" y="708" width="14" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4L9-6P-OmM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J6l-4B-BQY" firstAttribute="leading" secondItem="4L9-6P-OmM" secondAttribute="leading" id="BKa-FB-PNU"/>
+                            <constraint firstItem="J6l-4B-BQY" firstAttribute="top" secondItem="4L9-6P-OmM" secondAttribute="top" id="hDC-4g-gGU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TRAINER" id="ofY-S1-CQM"/>
                     <connections>
@@ -141,13 +144,6 @@ Trainer Jenny
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trainerDetail" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-C7-7tz">
-                                <rect key="frame" x="20" y="120" width="200" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="2fl-BQ-niP"/>
-                                    <constraint firstAttribute="width" constant="200" id="Wyc-VU-7E2"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-sQ-dZX">
                                 <rect key="frame" x="228" y="142" width="166" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -220,9 +216,8 @@ Trainer Jenny
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-EK-n15">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-EK-n15">
                                 <rect key="frame" x="38" y="484" width="335" height="302"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="105" id="Sac-qX-1q1" customClass="ReviewCell" customModule="Grit" customModuleProvider="target">
@@ -271,8 +266,10 @@ Trainer Jenny
                         <viewLayoutGuide key="safeArea" id="fTY-O1-V0g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tkT-C7-7tz" firstAttribute="leading" secondItem="fTY-O1-V0g" secondAttribute="leading" constant="20" id="Is3-Sl-9jI"/>
-                            <constraint firstItem="tkT-C7-7tz" firstAttribute="top" secondItem="fTY-O1-V0g" secondAttribute="top" constant="32" id="V8n-D6-xk9"/>
+                            <constraint firstItem="fTY-O1-V0g" firstAttribute="bottom" secondItem="BuI-EK-n15" secondAttribute="bottom" constant="27" id="2aE-SF-plv"/>
+                            <constraint firstItem="BuI-EK-n15" firstAttribute="top" secondItem="PkQ-ax-3Yg" secondAttribute="bottom" constant="-412" id="CUm-fS-FwM"/>
+                            <constraint firstItem="BuI-EK-n15" firstAttribute="leading" secondItem="fTY-O1-V0g" secondAttribute="leading" constant="38" id="IkF-D5-7tt"/>
+                            <constraint firstItem="fTY-O1-V0g" firstAttribute="trailing" secondItem="BuI-EK-n15" secondAttribute="trailing" constant="41" id="XnW-Rx-7DZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TRAINER DETAIL" id="UzM-iR-0ED"/>
@@ -280,7 +277,6 @@ Trainer Jenny
                         <outlet property="Review_table" destination="BuI-EK-n15" id="Mmm-1f-M1J"/>
                         <outlet property="TitleLabel" destination="uAw-sQ-dZX" id="N2Z-KC-xm1"/>
                         <outlet property="TrainerAward" destination="5YK-2h-VtO" id="twn-be-3wr"/>
-                        <outlet property="TrainerPF" destination="tkT-C7-7tz" id="fIY-7F-hL8"/>
                         <outlet property="Trainer_detail" destination="cMK-jE-eHh" id="6pe-RL-NFM"/>
                     </connections>
                 </viewController>
@@ -474,7 +470,6 @@ Trainer Jenny
         <image name="Trainer" width="31" height="19"/>
         <image name="facebook" width="25" height="25"/>
         <image name="rightArrow" width="15" height="11"/>
-        <image name="trainerDetail" width="177" height="268"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
