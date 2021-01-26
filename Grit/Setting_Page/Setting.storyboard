@@ -43,11 +43,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_circleOne" translatesAutoresizingMaskIntoConstraints="NO" id="cCI-rV-ov2">
-                                        <rect key="frame" x="82" y="75" width="91" height="91"/>
+                                        <rect key="frame" x="96" y="87" width="61" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_circleThree" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-9T-Q5y">
-                                        <rect key="frame" x="280" y="75" width="91" height="91"/>
+                                        <rect key="frame" x="229" y="87" width="61" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Ox1-Yt-IxB">
+                                        <rect key="frame" x="302" y="87" width="61" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_detail" translatesAutoresizingMaskIntoConstraints="NO" id="1z7-T0-kdB">
@@ -55,7 +59,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_circleTwo" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-y9-mHj">
-                                        <rect key="frame" x="181" y="75" width="91" height="91"/>
+                                        <rect key="frame" x="163" y="87" width="61" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-cz-vOH">
@@ -79,7 +83,7 @@
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e43-8G-PBk">
-                                        <rect key="frame" x="193" y="104" width="66" height="32"/>
+                                        <rect key="frame" x="161" y="104" width="66" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목표 운동시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1m-9s-2Z2">
@@ -99,7 +103,7 @@
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-Ta-rL5">
-                                        <rect key="frame" x="292" y="104" width="66" height="32"/>
+                                        <rect key="frame" x="228" y="104" width="66" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목표 걸음수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7C-ZU-a3r">
@@ -134,6 +138,26 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKy-a4-c77">
+                                        <rect key="frame" x="299" y="104" width="66" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="수강권 현황" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJC-C0-Wr6">
+                                                <rect key="frame" x="13" y="0.0" width="40.5" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1/30회" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxf-iY-WJF">
+                                                <rect key="frame" x="18" y="12" width="32" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -334,13 +358,14 @@
     </scenes>
     <resources>
         <image name="SelectSetting" width="35" height="27"/>
-        <image name="Setting" width="35" height="27"/>
+        <image name="Setting" width="62" height="62"/>
+        <image name="blackCircle" width="62" height="62"/>
         <image name="chatPlusBtn" width="44" height="44"/>
         <image name="disclosure" width="8" height="44"/>
         <image name="plus" width="22" height="22"/>
-        <image name="setting_circleOne" width="92" height="92"/>
-        <image name="setting_circleThree" width="92" height="92"/>
-        <image name="setting_circleTwo" width="92" height="92"/>
+        <image name="setting_circleOne" width="62" height="62"/>
+        <image name="setting_circleThree" width="62" height="62"/>
+        <image name="setting_circleTwo" width="62" height="62"/>
         <image name="setting_detail" width="70" height="13"/>
         <image name="user" width="69" height="69"/>
         <systemColor name="systemBackgroundColor">
