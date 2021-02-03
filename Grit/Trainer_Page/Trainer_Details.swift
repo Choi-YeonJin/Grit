@@ -384,7 +384,34 @@ extension Trainer_Details: UITableViewDataSource,UITableViewDelegate{
         cell.reviewer.text = "20.12.10 수강생 김00"
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 8
-        cell.backgroundColor = UIColor.init(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9803921569, blue: 0.9803921569, alpha: 1)
+        cell.cellView.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9803921569, blue: 0.9803921569, alpha: 1)
+                
+        cell.review_name.snp.makeConstraints{
+            make in
+            make.leading.top.equalTo(cell.cellView)
+            make.height.equalTo(cell.cellView.snp.height).multipliedBy(0.7)
+        }
+        
+        cell.review_content.snp.makeConstraints{
+            make in
+            make.leading.equalTo(cell.cellView)
+            make.top.equalTo(cell.review_name.snp.bottom)
+            make.height.equalTo(cell.cellView.snp.height).multipliedBy(0.7)
+        }
+        
+        cell.reviewer.snp.makeConstraints{
+            make in
+            make.bottom.trailing.equalTo(cell.cellView)
+        }
+        
+        cell.cellView.snp.makeConstraints{
+            make in
+            make.height.equalTo(cell.snp.height).multipliedBy(0.8)
+            make.width.equalTo(cell.snp.width).multipliedBy(0.95)
+            make.center.equalTo(cell)
+        }
+        
         return cell
     }
     
