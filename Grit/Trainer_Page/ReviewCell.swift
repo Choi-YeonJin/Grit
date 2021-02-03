@@ -10,15 +10,13 @@ import UIKit
 class ReviewCell: UITableViewCell {
     
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var review_name: UILabel!
     @IBOutlet weak var review_content: UILabel!
     @IBOutlet weak var reviewer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
     }
-    
     
 }
